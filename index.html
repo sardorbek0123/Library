@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <section>
+      <div class="max-w-[600px] block mx-[auto] pt-[20px]">
+        <div class="bg-[#ffffff] rounded-[10px] pb-[10px] bg-opacity-[0.7]">
+          <h1 class="text-center text-6xl flex justify-center items-center">
+            My Library
+          </h1>
+          <button
+            id="toggle-form"
+            class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 block mx-auto my-[10px]"
+          >
+            Add book
+          </button>
+        </div>
+
+        <form
+          id="book-form"
+          class="mx-auto hidden bg-[#ffffff] rounded-[10px] mt-[10px] p-[10px] bg-opacity-[0.7]"
+        >
+          <div class="mb-4">
+            <label for="title" class="block text-gray-700 font-bold mb-2"
+              >Title</label
+            >
+            <input
+              type="text"
+              id="title"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="author" class="block text-gray-700 font-bold mb-2"
+              >Author</label
+            >
+            <input
+              type="text"
+              id="author"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="pages" class="block text-gray-700 font-bold mb-2"
+              >Pages</label
+            >
+            <input
+              type="text"
+              id="pages"
+              min="0"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="year" class="block text-gray-700 font-bold mb-2"
+              >Year</label
+            >
+            <input
+              type="text"
+              id="year"
+              min="1000"
+              max="2023"
+              minlength="4"
+              maxlength="4"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              required
+            />
+          </div>
+          <div class="mb-4 flex gap-[20px]">
+            <label for="read" class="block text-gray-700 font-bold mb-2"
+              >Read</label
+            >
+            <input
+              type="checkbox"
+              id="read"
+              class="h-6 w-6 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+            />
+          </div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Add Book
+          </button>
+        </form>
+
+        <div
+          class="mt-[20px] bg-[#ffffff] rounded-[10px] pb-[10px] bg-opacity-[0.7]"
+        >
+          <div class="flex justify-between mx-[44px]">
+            <div>Title</div>
+            <div>Author</div>
+            <div>Pages</div>
+            <div>Year</div>
+            <div>Status</div>
+          </div>
+          <ul id="book-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
