@@ -37,7 +37,7 @@ function render() {
     li.style.listStyle = "none";
     li.innerHTML = `<div class="py-4 border-b border-gray-300 max-w-lg mx-auto">
     <div class="flex items-center justify-between">
-      <div class="text-lg font-medium text-gray-900">${book.title}</div>
+      <div class="text-lg font-medium text-gray-900   ">${book.title}</div>
       <div class="text-sm font-medium text-gray-500">${book.author}</div>
       <div class="text-sm font-medium text-gray-500">${book.year}</div>
       <div class="text-sm font-medium text-gray-500">${book.pages}</div>
@@ -114,21 +114,3 @@ const bookForm = document.querySelector("#book-form");
 toggleFormButton.addEventListener("click", () => {
   bookForm.classList.toggle("hidden");
 });
-
-// BACKGROUND IMAGE SLIDER
-
-const body = document.getElementById("body");
-const images = [
-  "images/1.jpg",
-  "images/2.jpg",
-  "images/3.jpg",
-  "images/4.jpg",
-  "images/5.jpg",
-  "images/6.jpg",
-];
-let currentIndex = 0;
-
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % images.length;
-  body.style.backgroundImage = `url(${images[currentIndex]})`;
-}, 5000);
